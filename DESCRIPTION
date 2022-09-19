@@ -1,0 +1,29 @@
+Package: obrr
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 3.5.0)
+Imports:
+    dplyr (>= 0.8.5),
+    tidyr,
+    purrr,
+    stringr,
+    rvest,
+    readxl,
+    rlang,
+    lifecycle
+RoxygenNote: 7.1.2
+Suggests: 
+    testthat,
+    covr,
+    knitr,
+    rmarkdown
+RdMacros: lifecycle
+VignetteBuilder: knitr
