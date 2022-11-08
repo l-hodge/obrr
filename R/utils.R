@@ -3,7 +3,8 @@
 #' @description Find the date of the latest available data
 #'
 #' @importFrom dplyr "%>%"
-#' @importFrom rvest read_html html_nodes html_text
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_nodes html_text
 #' @importFrom stringr str_extract
 #'
 #' @return A date
