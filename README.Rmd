@@ -18,15 +18,41 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of obrr is to fetch time series of the latest OBR projections.
+The goal of `obrr` is to make it easy to retrieve time series of the latest [OBR forecasts](https://obr.uk/forecasts-in-depth/the-economy-forecast/).
 
 ## Installation
 
-You can install the development version of obrr from [GitHub](https://github.com/) with:
+You can install the package from GitHub with:
 
-``` r
+```{r, include = TRUE, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("l-hodge/obrr")
 ```
 
 ## Example
+
+The following will retrieve a time series of CPI and RPI inflation, including projections from the OBR. 
+
+```{r}
+library(obrr)
+
+# Wide
+obr_annual(c("CPI", "RPI"), long = FALSE)
+
+# Long
+obr_annual(c("CPI", "RPI"), long = TRUE)
+
+```
+
+### Which time series indicators are available? 
+
+You can use `obr_meta()` to display available time series - id, title and units.
+
+```{r, include = FALSE, eval = TRUE}
+library(dplyr)
+```
+
+```{r, results = "asis", eval = TRUE, echo = FALSE, warning = FALSE, message = FALSE}
+obr_meta() %>%
+    knitr::kable()
+```
