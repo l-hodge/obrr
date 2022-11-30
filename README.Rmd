@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # obrr
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/l-hodge/obrr/workflows/R-CMD-check/badge.svg)](https://github.com/l-hodge/obrr/actions)
 <!-- badges: end -->
 
 The goal of `obrr` is to make it easy to retrieve time series of the latest [OBR forecasts](https://obr.uk/forecasts-in-depth/the-economy-forecast/).
