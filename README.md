@@ -4,6 +4,8 @@
 # obrr
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/l-hodge/obrr/workflows/R-CMD-check/badge.svg)](https://github.com/l-hodge/obrr/actions)
 <!-- badges: end -->
 
 The goal of `obrr` is to make it easy to retrieve time series of the
@@ -29,29 +31,30 @@ library(obrr)
 
 # Wide
 obr_annual(c("CPI", "RPI"), long = FALSE)
-#>    year Forecast        CPI        RPI
-#> 1  2009  outturn 2.16532045 -0.5314403
-#> 2  2010  outturn 3.29817158  4.6213244
-#> 3  2011  outturn 4.46369329  5.1999851
-#> 4  2012  outturn 2.82824210  3.2067182
-#> 5  2013  outturn 2.56479882  3.0418512
-#> 6  2014  outturn 1.46103141  2.3689734
-#> 7  2015  outturn 0.04009937  0.9796901
-#> 8  2016  outturn 0.65966612  1.7437550
-#> 9  2017  outturn 2.68313137  3.5829689
-#> 10 2018  outturn 2.47805619  3.3428144
-#> 11 2019  outturn 1.79102059  2.5628885
-#> 12 2020  outturn 0.85065403  1.5033471
-#> 13 2021  outturn 2.58822195  4.0452569
-#> 14 2022 forecast 7.44390184  9.8251428
-#> 15 2023 forecast 4.04195307  5.5063592
-#> 16 2024 forecast 1.53508743  2.3426502
-#> 17 2025 forecast 1.87995265  2.5166258
-#> 18 2026 forecast 2.00000000  2.7136752
+#>    year Forecast         CPI        RPI
+#> 1  2009  outturn  2.16532045 -0.5314403
+#> 2  2010  outturn  3.29817158  4.6213244
+#> 3  2011  outturn  4.46369329  5.1999851
+#> 4  2012  outturn  2.82824210  3.2067182
+#> 5  2013  outturn  2.56479882  3.0418512
+#> 6  2014  outturn  1.46103141  2.3689734
+#> 7  2015  outturn  0.04009937  0.9796901
+#> 8  2016  outturn  0.65966612  1.7437550
+#> 9  2017  outturn  2.68313137  3.5829689
+#> 10 2018  outturn  2.47805619  3.3428144
+#> 11 2019  outturn  1.79102059  2.5628885
+#> 12 2020  outturn  0.85065403  1.5033471
+#> 13 2021  outturn  2.58822195  4.0452569
+#> 14 2022 forecast  9.14944682 11.6369034
+#> 15 2023 forecast  7.35583082 10.7106159
+#> 16 2024 forecast  0.62762745  1.4955780
+#> 17 2025 forecast -0.77520658 -0.3531997
+#> 18 2026 forecast  0.17288174  0.9697391
+#> 19 2027 forecast  1.71588852  2.5721322
 
 # Long
 obr_annual(c("CPI", "RPI"), long = TRUE)
-#> # A tibble: 36 x 4
+#> # A tibble: 38 x 4
 #>     year Forecast Indicator  Value
 #>    <dbl> <fct>    <chr>      <dbl>
 #>  1  2009 outturn  CPI        2.17 
@@ -64,7 +67,7 @@ obr_annual(c("CPI", "RPI"), long = TRUE)
 #>  8  2012 outturn  RPI        3.21 
 #>  9  2013 outturn  CPI        2.56 
 #> 10  2013 outturn  RPI        3.04 
-#> # ... with 26 more rows
+#> # ... with 28 more rows
 ```
 
 ### Which time series indicators are available?
