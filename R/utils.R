@@ -22,7 +22,7 @@ obr_date <- function(){
     html_text()
   )[[2]]
 
-  return(str_extract(date, "[^–]+"))
+  return(str_extract(date, "[^\\u2013]+"))
 
 }
 
